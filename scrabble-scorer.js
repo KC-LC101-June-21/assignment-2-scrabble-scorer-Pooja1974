@@ -11,6 +11,20 @@ const oldPointStructure = {
   8: ['J', 'X'],
   10: ['Q', 'Z']
 };
+  function simpleAlgo(word)
+  {
+    word = word.toUpperCase();
+   let letterPoints="";
+    simpleScore=0;
+   
+   for(let i=0;i<word.length;i++){
+   
+   letterPoints += `Points for '${word[i]}': 1\n`
+   simpleScore += 1
+
+   }
+ return simpleScore;
+  }
   
 
 
@@ -39,20 +53,7 @@ function initialPrompt() {
     oldScore=input.question(" \n\nEnter a word to score: ");
 };
 
-let simpleScore= function(word)
-{
- word = word.toUpperCase();
-   let letterPoints="";
-   let simpleScore1=0;
-   
-   for(let i=0;i<word.length;i++){
-   
-   letterPoints += `Points for '${word[i]}': 1\n`
-   simpleScore1 += 1
-
-   }
- return simpleScore1;
-  }
+let simpleScore;
 
 
 let vowelBonusScore=function(word)
@@ -99,7 +100,7 @@ let newPointStructure;
 function runProgram() {
    initialPrompt();
    console.log(oldScrabbleScorer(oldScore))
-   console.log(simpleScore(oldScore))
+   console.log(simpleAlgo(oldScore))
    console.log(vowelBonusScore(oldScore))
 }
 

@@ -130,10 +130,11 @@ const scoringAlgorithms = [
 {
 name:"Simple",
 description: "Each letter is worth 1 point",
-scorerFunction: simpleScore(word)
-/*function (word) {
+scorerFunction: 
+function (word) {
   
-   let letterPoints="";
+ return simpleScore(word);}
+   /*let letterPoints="";
    simpleScore=0;
        
    for(let i=0;i<word.length;i++){
@@ -142,8 +143,9 @@ scorerFunction: simpleScore(word)
    simpleScore += 1
 
    }
-return simpleScore; 
+return simpleScore/; 
 }*/
+
 },
 {name:"Bonus Vowels",
   description:"Vowels are 3 pts, consonants are 1 pt.",
@@ -151,7 +153,10 @@ return simpleScore;
   
   function(word)
   {
-  word = word.toUpperCase();
+
+    return vowelBonusScore(word);
+  }
+  /*word = word.toUpperCase();
    let letterPoints="";
    let vowel=0;
    let conso=0;
@@ -171,7 +176,7 @@ return simpleScore;
    }
    }
    vowelBonusScore=vowel+conso;
- return vowelBonusScore;}
+ return vowelBonusScore;}*/
 },
  {
    name:"Scrabble",
@@ -195,14 +200,19 @@ word = word.toUpperCase();
 	return total;
    }*/
 scorerFunction:function (word) {
+
+return scrabbleScore(word);
+
+}
+
   //word = word.toUpperCase();
-let total=0;
+/*let total=0;
 for (let i = 0; i < word.length; i++){
 
 total += Number(newPointStructure[word[i]]);
 }
 return total;
-}
+}*/
 
     }];
 

@@ -13,10 +13,8 @@ const oldPointStructure = {
   10: ['Q', 'Z']
 };
   
-
 let newPointStructure={};
 function transform(obj) {
-
   for (let x in obj) {
 for (let i = 0; i < obj[x].length; i++) {
 newPointStructure[(obj[x][i]).toLowerCase()] = x;
@@ -27,7 +25,7 @@ newPointStructure[(obj[x][i]).toLowerCase()] = x;
 return newPointStructure;
 
 }
-newPointStructure =transform(oldPointStructure);
+ newPointStructure =transform(oldPointStructure);
 
 
 function initialPrompt() {
@@ -98,6 +96,20 @@ word = word.toUpperCase();
  return vowelBonusScore1;
   
 }
+let scrabbleScore =function(word)
+{
+
+let total=0;
+for (let i = 0; i < word.length; i++){
+
+total += Number(newPointStructure[word[i]]);
+}
+return total;
+}
+
+    
+
+
 
 
 
@@ -242,7 +254,7 @@ return total;
 }*/
 
 
-let scrabbleScore;
+//let scrabbleScore;
 
 let oldScore;
 

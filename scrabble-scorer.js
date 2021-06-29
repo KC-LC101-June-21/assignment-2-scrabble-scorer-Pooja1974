@@ -54,7 +54,23 @@ function initialPrompt() {
 
 // your job is to finish writing these functions and variables that we've named //
 // don't change the names or your program won't work as expected. //
-//let input1;
+//let input1
+
+function simpleScore(word)
+{
+  
+  
+   let letterPoints="";
+   simpleScore=0;
+       
+   for(let i=0;i<word.length;i++){
+   
+   letterPoints += `Points for '${word[i]}': 1\n`
+   simpleScore += 1
+
+   }
+return simpleScore; 
+}
 
 
 
@@ -68,7 +84,7 @@ Which scoring algorithm would you like to use?
 Enter 0,1,2:`);
 return scoringAlgorithm;
 }*/
-let simpleScore;
+//let simpleScore;
 let vowelBonusScore;
 
 const scoringAlgorithms = [
@@ -87,7 +103,7 @@ function (word) {
    simpleScore += 1
 
    }
-return simpleScore; 
+return simpleScore1; 
 }
 },
 {name:"Bonus Vowels",
@@ -104,13 +120,13 @@ return simpleScore;
    {
    letterPoints += `Points for '${word[i]}': 3\n`
    vowel += 3
-   console.log(letterPoints+vowel)
+   
    }
    else
    {
      letterPoints += `Points for '${word[i]}': 1\n`
    conso +=1
-   console.log(letterPoints+conso)
+   
    }
    }
    vowelBonusScore=vowel+conso;

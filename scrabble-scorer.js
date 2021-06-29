@@ -130,7 +130,7 @@ const scoringAlgorithms = [
 {
 name:"Simple",
 description: "Each letter is worth 1 point",
-scorerFunction: 
+scoringFunction: 
 function (word) {
   
  return simpleScore(word);}
@@ -149,7 +149,7 @@ return simpleScore/;
 },
 {name:"Bonus Vowels",
   description:"Vowels are 3 pts, consonants are 1 pt.",
-  scorerFunction:
+  scoringFunction:
   
   function(word)
   {
@@ -199,7 +199,7 @@ word = word.toUpperCase();
 	}
 	return total;
    }*/
-scorerFunction:function (word) {
+scoringFunction:function (word) {
 
 return scrabbleScore(word);
 
@@ -233,17 +233,17 @@ function runProgram() {
   if (userInput==0)
   {
   console.log("algorithm name: ", scoringAlgorithms[0].name);
-console.log("scorerFunction result: ", scoringAlgorithms[0].scorerFunction(newWord))
+console.log("scorerFunction result: ", scoringAlgorithms[0].scoringFunction(newWord))
   }
 else if(userInput==1)
 {
 console.log("algorithm name: ", scoringAlgorithms[1].name);
-console.log("scorerFunction result: ", scoringAlgorithms[1].scorerFunction(newWord))
+console.log("scorerFunction result: ", scoringAlgorithms[1].scoringFunction(newWord))
 }
 else if(userInput==2)
 {
 console.log("algorithm name: ", scoringAlgorithms[2].name);
-console.log("scorerFunction result: ", scoringAlgorithms[2].scorerFunction(newWord))
+console.log("scorerFunction result: ", scoringAlgorithms[2].scoringFunction(newWord))
 
 }
 

@@ -73,6 +73,31 @@ function simpleScore(word)
    }
 return simpleScore; 
 }
+vowelBonusScore=function(word)
+{
+word = word.toUpperCase();
+   let letterPoints="";
+   let vowel=0;
+   let conso=0;
+   vowelBonusScore1=0;
+   for(let i=0;i<word.length;i++){
+   if(word[i]=='A'||word[i]=='E'||word[i]=='I'||word[i]=='O'||word[i]=='U')
+   {
+   letterPoints += `Points for '${word[i]}': 3\n`
+   vowel += 3
+   //console.log(letterPoints+vowel)
+   }
+   else
+   {
+     letterPoints += `Points for '${word[i]}': 1\n`
+   conso +=1
+   //console.log(letterPoints+conso)
+   }
+   }
+   vowelBonusScore1=vowel+conso;
+ return vowelBonusScore1;
+  
+}
 
 
 
@@ -207,31 +232,6 @@ console.log("scorerFunction result: ", scoringAlgorithms[2].scorerFunction(newWo
 
 
 
-vowelBonusScore=function(word)
-{
-word = word.toUpperCase();
-   let letterPoints="";
-   let vowel=0;
-   let conso=0;
-   vowelBonusScore1=0;
-   for(let i=0;i<word.length;i++){
-   if(word[i]=='A'||word[i]=='E'||word[i]=='I'||word[i]=='O'||word[i]=='U')
-   {
-   letterPoints += `Points for '${word[i]}': 3\n`
-   vowel += 3
-   //console.log(letterPoints+vowel)
-   }
-   else
-   {
-     letterPoints += `Points for '${word[i]}': 1\n`
-   conso +=1
-   //console.log(letterPoints+conso)
-   }
-   }
-   vowelBonusScore1=vowel+conso;
- return vowelBonusScore1;
-  
-}
 
 /*let total=0;
 for (let i = 0; i < word.length; i++){

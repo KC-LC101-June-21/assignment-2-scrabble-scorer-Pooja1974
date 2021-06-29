@@ -13,8 +13,8 @@ const oldPointStructure = {
   10: ['Q', 'Z']
 };
   
-let newPointStructure={};
 
+let newPointStructure={};
 function transform(obj) {
 
   for (let x in obj) {
@@ -24,8 +24,10 @@ newPointStructure[(obj[x][i]).toLowerCase()] = x;
 }
 //newPointStructure[' '] = 0;
 }
+return newPointStructure;
+
 }
-transform(oldPointStructure);
+newPointStructure =transform(oldPointStructure);
 
 
 function initialPrompt() {
@@ -108,7 +110,9 @@ return simpleScore;
 },
 {name:"Bonus Vowels",
   description:"Vowels are 3 pts, consonants are 1 pt.",
-  scorerFunction:function(word)
+  scorerFunction:
+  
+  function(word)
   {
   word = word.toUpperCase();
    let letterPoints="";

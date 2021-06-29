@@ -130,8 +130,8 @@ const scoringAlgorithms = [
 {
 name:"Simple",
 description: "Each letter is worth 1 point",
-scorerFunction:
-function (word) {
+scorerFunction: simpleScore(word)
+/*function (word) {
   
    let letterPoints="";
    simpleScore=0;
@@ -143,7 +143,7 @@ function (word) {
 
    }
 return simpleScore; 
-}
+}*/
 },
 {name:"Bonus Vowels",
   description:"Vowels are 3 pts, consonants are 1 pt.",

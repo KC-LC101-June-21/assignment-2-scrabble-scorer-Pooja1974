@@ -22,7 +22,7 @@ for (let i = 0; i < obj[x].length; i++) {
 newPointStructure[(obj[x][i]).toLowerCase()] = x;
 
 }
-//newPointStructure[' '] = 0;
+newPointStructure[' '] = 0;
 }
 }
 transform(oldPointStructure);
@@ -103,7 +103,7 @@ function (word) {
    simpleScore += 1
 
    }
-return simpleScore1; 
+return simpleScore; 
 }
 },
 {name:"Bonus Vowels",
@@ -203,7 +203,7 @@ console.log("scorerFunction result: ", scoringAlgorithms[2].scorerFunction(newWo
 
 
 
-/*let vowelBonusScore=function(word)
+vowelBonusScore=function(word)
 {
 word = word.toUpperCase();
    let letterPoints="";
@@ -227,7 +227,7 @@ word = word.toUpperCase();
    vowelBonusScore1=vowel+conso;
  return vowelBonusScore1;
   
-}*/
+}
 
 /*let total=0;
 for (let i = 0; i < word.length; i++){

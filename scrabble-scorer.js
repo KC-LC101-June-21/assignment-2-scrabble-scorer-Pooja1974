@@ -112,7 +112,7 @@ Enter 0,1,2:`);
 return scoringAlgorithm;
 }*/
 //let simpleScore;
-let vowelBonusScore;
+//let vowelBonusScore;
 
 const scoringAlgorithms = [
 {

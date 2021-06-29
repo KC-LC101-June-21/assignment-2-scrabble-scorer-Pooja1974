@@ -22,7 +22,7 @@ for (let i = 0; i < obj[x].length; i++) {
 newPointStructure[(obj[x][i]).toLowerCase()] = x;
 
 }
-newPointStructure[' '] = 0;
+//newPointStructure[' '] = 0;
 }
 }
 transform(oldPointStructure);
